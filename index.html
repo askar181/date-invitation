@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Приглашение ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #ffd6e7,
+                #fff0f5,
+                #ffc1d9
+            );
+        }
+
+        .card {
+            width: 90%;
+            max-width: 500px;
+
+            background: rgba(255, 255, 255, 0.9);
+
+            padding: 40px 30px;
+
+            border-radius: 30px;
+
+            text-align: center;
+
+            box-shadow: 0 15px 40px rgba(180, 60, 100, 0.2);
+        }
+
+        .heart {
+            font-size: 65px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            color: #c2185b;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 25px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .text {
+            font-size: 17px;
+            color: #555;
+            margin: 20px 0 30px;
+        }
+
+        .info {
+            background: #fff0f5;
+            border-radius: 20px;
+            padding: 15px;
+            margin: 12px 0;
+
+            font-size: 18px;
+        }
+
+        button {
+            margin-top: 25px;
+
+            padding: 15px 35px;
+
+            border: none;
+            border-radius: 30px;
+
+            background: #e91e63;
+            color: white;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            background: #c2185b;
+        }
+
+        #answer {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #c2185b;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="heart">❤️</div>
+
+    <h1>Приглашение на свидание</h1>
+
+    <div class="name">
+        Для: Дашенька
+    </div>
+
+    <div class="text">
+        Я хочу провести этот вечер вместе с тобой ✨
+    </div>
+
+    <div class="info">
+        📅 <b>Дата:</b> 4 октября
+    </div>
+
+    <div class="info">
+        🕖 <b>Время:</b> 15:00
+    </div>
+
+    <div class="info">
+        📍 <b>Место:</b> ?
+    </div>
+
+    <button onclick="accept()">
+        Я приду ❤️
+    </button>
+
+    <div id="answer"></div>
+
+</div>
+
+<script>
+
+function accept() {
+
+    document.getElementById("answer").innerHTML =
+        "Ура! Тогда до встречи 🥰❤️";
+
+}
+
+</script>
+
+</body>
+</html>
